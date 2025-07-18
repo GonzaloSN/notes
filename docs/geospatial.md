@@ -91,7 +91,7 @@ const wmsLayer = L.tileLayer.wms('https://tuservidor/geoserver/wms', {
   format: 'image/png',
   transparent: true,
   attribution: '© Tu GeoServer',
-  'tileSize': 256
+  tileSize: 256
 }).addTo(map);
 ```
 
@@ -100,9 +100,11 @@ const wmsLayer = L.tileLayer.wms('https://tuservidor/geoserver/wms', {
 ## 🧱 Servidores GIS open source
 ¿Qué es esto? En pocas palabras, es una herramienta que te permite alojar mapas en internet y acceder a ellos de forma remota desde tu aplicación o sitio web.
 
-Uno de los más usados es, sin duda, GeoServer. Su principal desventaja es que requiere más recursos que una app común: se recomienda al menos 8 GB de RAM para que funcione de manera fluida, ya que funciona sobre una máquina virtual Java (JVM).. Si cuentas con eso, tu instancia de GeoServer debería funcionar sin problemas.
+Uno de los más usados es, sin duda, GeoServer. Su principal desventaja es que requiere más recursos que una app común: se recomienda al menos 8 GB de RAM para que funcione de manera fluida, ya que funciona sobre una máquina virtual Java (JVM). Si cuentas con eso, tu instancia de GeoServer debería funcionar sin problemas. Es una herramiento excepcional además cuenta con una interfaz de usuario.
 
 Un servidor que he estado utilizando últimamente es pg_tileserv, un geoservidor liviano y eficiente que permite exponer capas vectoriales como tiles directamente desde una base de datos PostGIS. Es una herramienta muy potente, ya que al estar integrada al ecosistema PostgreSQL, aprovecha al máximo las capacidades de PostGIS, especialmente en lo que respecta a consultas espaciales complejas y procesamiento topológico robusto.
+
+También he oído hablar de `MapServer`, una herramienta muy utilizada por instituciones grandes como la NASA para ciertos tipos de tareas geoespaciales. Aún no he tenido la necesidad de migrar hacia él, pero está en mi radar: me gustaría hacer algunas pruebas o experimentar con su funcionamiento para ver qué tan bien se adapta a distintos flujos de trabajo.
 
 ### 🌐 GeoServer
 - Permite publicar capas WMS, WFS, WMTS.
